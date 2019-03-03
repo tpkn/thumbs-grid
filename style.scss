@@ -13,8 +13,8 @@ $thumb_min_width: 280px;
 $thumb_height: 180px;
 
 // Columns min/max
-$colunms_min: 1;
-$colunms_max: 15;
+$columns_min: 1;
+$columns_max: 15;
 
 .thumbs-container {
    display: flex;
@@ -51,7 +51,7 @@ $colunms_max: 15;
    }
 }
 
-@for $i from $colunms_min through $colunms_max {
+@for $i from $columns_min through $columns_max {
    @media screen and (min-width: #{$i * $thumb_min_width}) {
       .thumb {
          width: #{100% / $i};
