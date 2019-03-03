@@ -1,0 +1,149 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+.thumbs-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.thumb {
+  position: relative;
+  width: 320px;
+  height: 180px;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+
+.thumb:hover {
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+.thumb:active {
+  -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (min-width: 0) {
+  .thumb {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  .thumb {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .thumb {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .thumb {
+    width: 33.33333%;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .thumb {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .thumb {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .thumb {
+    width: 16.66667%;
+  }
+}
+
+@media screen and (min-width: 1960px) {
+  .thumb {
+    width: 14.28571%;
+  }
+}
+
+@media screen and (min-width: 2240px) {
+  .thumb {
+    width: 12.5%;
+  }
+}
+
+@media screen and (min-width: 2520px) {
+  .thumb {
+    width: 11.11111%;
+  }
+}
+
+@media screen and (min-width: 2800px) {
+  .thumb {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 3080px) {
+  .thumb {
+    width: 9.09091%;
+  }
+}
+
+@media screen and (min-width: 3360px) {
+  .thumb {
+    width: 8.33333%;
+  }
+}
+
+@media screen and (min-width: 3640px) {
+  .thumb {
+    width: 7.69231%;
+  }
+}
+
+@media screen and (min-width: 3920px) {
+  .thumb {
+    width: 7.14286%;
+  }
+}
+
+@media screen and (min-width: 4200px) {
+  .thumb {
+    width: 6.66667%;
+  }
+}

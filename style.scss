@@ -1,0 +1,74 @@
+* {
+	box-sizing: border-box;
+}
+
+html,body {
+	margin: 0;
+}
+
+
+// Thumbs size
+$thumb_width: 320px;
+$thumb_min_width: 280px;
+$thumb_height: 180px;
+
+// Columns min/max
+$colunms_min: 1;
+$colunms_max: 15;
+
+.thumbs-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.thumb {
+	position: relative;
+
+	width: $thumb_width;
+	height: $thumb_height;
+	
+	overflow: hidden;
+
+	border: 1px solid #eeeeee;
+
+	transition: all .3s;
+}
+
+.thumb:hover {
+	border: 1px solid #ffffff;
+	box-shadow: 0 0 20px -5px rgba(0,0,0,0.4);
+}
+
+.thumb:active {
+	box-shadow: 0 0 20px -5px rgba(0,0,0,0.7);
+}
+
+@media screen and (min-width: 0) {
+	.thumb {
+		width: 100%;
+	}
+}
+
+@for $i from $colunms_min through $colunms_max {
+	@media screen and (min-width: #{$i * $thumb_min_width}) {
+		.thumb {
+			width: #{100% / $i};
+
+			// @if $i > 5 {
+			// 	height: $thumb_height + 20;
+			// }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
