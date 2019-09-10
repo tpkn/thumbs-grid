@@ -1,0 +1,86 @@
+// Thumbs size
+$thumb_width: 320px;
+$thumb_min_width: 280px;
+
+// Columns min/max
+$columns_min: 1;
+$columns_max: 30;
+
+.tg_thumbs_container {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: stretch;
+   align-content: stretch;
+}
+
+// Aspec ratio
+.tg_thumbs_container.ar16_9 {
+   .stretch {
+      padding-top: 56.25%;
+   }
+}
+
+.tg_thumbs_container.ar4_3 {
+   .stretch {
+      padding-top: 75%;
+   }
+}
+
+.tg_thumbs_container.ar3_2 {
+   .stretch {
+      padding-top: 66.66%;
+   }
+}
+
+.tg_thumbs_container.ar1_1 {
+   .stretch {
+      padding-top: 100%;
+   }
+}
+
+
+.tg_thumb {
+   position: relative;
+   width: $thumb_width;
+   overflow: hidden;
+
+   border: 1px solid #eeeeee;
+
+   transition: all .3s;
+
+   .stretch {
+      width: 100%;
+   }
+
+   .block {
+      position: absolute;
+      left: 0; top: 0;
+
+      padding: 5px;
+      font-size: 12px;
+      font-family: monospace;
+   }
+}
+
+.tg_thumb:hover {
+   border: 1px solid #ffffff;
+   box-shadow: 0 0 20px -5px rgba(0,0,0,0.4);
+}
+
+.tg_thumb:active {
+   box-shadow: 0 0 20px -5px rgba(0,0,0,0.7);
+}
+
+@media screen and (min-width: 0) {
+   .tg_thumb {
+      width: 100%;
+   }
+}
+
+@for $i from $columns_min through $columns_max {
+   @media screen and (min-width: #{$i * $thumb_min_width}) {
+      .tg_thumb {
+         width: #{100% / $i};
+      }
+   }
+}

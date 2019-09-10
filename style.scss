@@ -6,59 +6,17 @@ html,body {
    margin: 0;
 }
 
-
-// Thumbs size
-$thumb_width: 320px;
-$thumb_min_width: 280px;
-$thumb_height: 180px;
-
-// Columns min/max
-$columns_min: 1;
-$columns_max: 15;
-
-.thumbs-container {
-   display: flex;
-   flex-wrap: wrap;
-   align-items: stretch;
-   align-content: stretch;
+h1 {
+   color: #ffffff;
+   font-size: 40px;
+   font-family: 'Fira Sans', sans-serif;
+   padding: 10px 0 10px 20px;
+   margin-top: 0;
+   margin-bottom: 0;
+   background: rgb(93,0,210);
+   background: linear-gradient(90deg, rgba(93,0,210,1) 0%, rgba(0,55,159,1) 100%);
 }
 
-.thumb {
-   position: relative;
-
-   width: $thumb_width;
-   height: $thumb_height;
-   
-   overflow: hidden;
-
-   border: 1px solid #eeeeee;
-
-   transition: all .3s;
-}
-
-.thumb:hover {
-   border: 1px solid #ffffff;
-   box-shadow: 0 0 20px -5px rgba(0,0,0,0.4);
-}
-
-.thumb:active {
-   box-shadow: 0 0 20px -5px rgba(0,0,0,0.7);
-}
-
-@media screen and (min-width: 0) {
-   .thumb {
-      width: 100%;
-   }
-}
-
-@for $i from $columns_min through $columns_max {
-   @media screen and (min-width: #{$i * $thumb_min_width}) {
-      .thumb {
-         width: #{100% / $i};
-
-         // @if $i > 5 {
-         //    height: $thumb_height + 20;
-         // }
-      }
-   }
+h1:not(:first-child) {
+   margin-top: 40px;
 }
